@@ -1,4 +1,4 @@
-import Repository from "./Repositoy";
+import { Repository } from "./Repositoy";
 
 export interface User {
   id?: number;

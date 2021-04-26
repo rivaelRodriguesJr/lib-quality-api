@@ -38,13 +38,7 @@ class UsersController {
 
     await trx.commit();
 
-    return response.status(201).json({ ok: true });
-  }
-
-  async find(request: Request, response: Response) {
-    const users = await knex.select('id', 'name', 'username').from<User>('users');
-
-    return response.json(users);
+    return response.status(201).json({ userId });
   }
 
   async findOne(request: Request, response: Response) {
